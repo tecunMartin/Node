@@ -1,7 +1,7 @@
-const db = require('mongoose');
+const db    = require('mongoose');
 const chalk = require('chalk');
 
-db.Promise = global.Promise;
+db.Promise  = global.Promise;
 
 async function connect(url) {
     // Creamos una coneccion con la DB
