@@ -1,18 +1,18 @@
 const express = require('express');
-const app = express();
-const server = require('http').Server(app);
-const cors = require('cors');
+const app     = express();
+const server  = require('http').Server(app);
+const cors    = require('cors');
 
 // Para las variables de entorno
 require('dotenv').config();
 
-const config = require('./config')
+const config  = require('./config')
 
 const bodyParser = require('body-parser');
-const db = require("./db");
-const socket = require('./socket');
-//const router = require('./components/message/network');
-const router = require('./network/routers');
+const db         = require("./db");
+const socket     = require('./socket');
+//const router   = require('./components/message/network');
+const router     = require('./network/routers');
 
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended:false}));
